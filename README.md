@@ -33,6 +33,21 @@ docker push localhost:5000/hello-world
 docker pull localhost:5000/hello-world
 ```
 
+## Act as Mirror
+In every docker host add to `/etc/docker/daemon.json`
+```json
+{
+  "registry-mirrors": ["https://<my-docker-mirror-host>"]
+}
+```
+
+Restart Docker
+```bash
+sudo systemctl restart docker
+```
+
+[https://docs.docker.com/registry/recipes/mirror/](https://docs.docker.com/registry/recipes/mirror/)
+
 ## References
 * [https://docs.docker.com/registry/deploying/](https://docs.docker.com/registry/deploying/)
 * [https://docs.docker.com/registry/insecure/](https://docs.docker.com/registry/insecure/)

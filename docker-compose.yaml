@@ -12,6 +12,9 @@ services:
       # REGISTRY_AUTH: htpasswd
       # REGISTRY_AUTH_HTPASSWD_PATH: /auth/htpasswd
       # REGISTRY_AUTH_HTPASSWD_REALM: Registry Realm
+
+      #https://docs.docker.com/registry/configuration/
+      REGISTRY_PROXY_REMOTEURL: https://registry-1.docker.io
     volumes:
       - ./data:/var/lib/registry
       - ./certs:/certs
