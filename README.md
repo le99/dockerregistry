@@ -48,9 +48,16 @@ sudo systemctl restart docker
 
 [https://docs.docker.com/registry/recipes/mirror/](https://docs.docker.com/registry/recipes/mirror/)
 
+## Query images in registry
+
+```bash
+curl --cacert ./domain.crt -X GET https://my-registry.com:5000/v2/_catalog
+```
+
 ## References
 * [https://docs.docker.com/registry/deploying/](https://docs.docker.com/registry/deploying/)
 * [https://docs.docker.com/registry/insecure/](https://docs.docker.com/registry/insecure/)
 * [https://www.youtube.com/watch?v=r15S2tBevoE](https://www.youtube.com/watch?v=r15S2tBevoE)
 * [https://github.com/docker/distribution/issues/948](https://github.com/docker/distribution/issues/948)
 * [https://github.com/justmeandopensource/docker/tree/master/docker-compose-files/docker-registry](https://github.com/justmeandopensource/docker/tree/master/docker-compose-files/docker-registry)
+*[https://stackoverflow.com/questions/31251356/how-to-get-a-list-of-images-on-docker-registry-v2](https://stackoverflow.com/questions/31251356/how-to-get-a-list-of-images-on-docker-registry-v2)
